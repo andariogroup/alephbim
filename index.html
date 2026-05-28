@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEPHBIM | Consultoría BIM Avanzada</title>
+    <meta name="description"
+        content="La integración total del proyecto, en un solo modelo. Integramos arquitectura, estructuras e instalaciones en un solo modelo digital.">
+    <meta name="keywords" content="BIM, ingeniería, modelado 3D, arquitectura, construcción, diseño">
+    <meta name="author" content="Tu Empresa">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Servicios BIM e Ingeniería">
+    <meta property="og:description" content="Soluciones profesionales de ingeniería y modelado BIM.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-white-wrapper">
+                    <img src="img/-_Isotipo_BLAN.png" alt="ALEPHBIM Isotipo" class="logo-icon">
+                    <img src="img/-_Nombre_BLANCO.png" alt="ALEPHBIM Nombre" class="logo-text">
+                </div>
+                <div class="logo-color-wrapper">
+                    <img src="img/-_isotipo_color (1).png" alt="ALEPHBIM Isotipo" class="logo-icon">
+                    <img src="img/-_Nombre_COLOR.png" alt="ALEPHBIM Nombre" class="logo-text">
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li class="dropdown">
+                    <a href="#servicios">Servicios</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="#servicios" id="drop-serv1">Diseño Integrado BIM <span
+                                    class="arrow-right">▸</span></a>
+                            <ul class="dropdown-menu-nested">
+                                <li><a href="#servicios" id="drop-spec1">Diseño arquitectónico</a></li>
+                                <li><a href="#servicios" id="drop-spec2">Diseño estructural</a></li>
+                                <li><a href="#servicios" id="drop-spec3">Diseño hidrosanitario</a></li>
+                                <li><a href="#servicios" id="drop-spec4">Diseño eléctrico</a></li>
+                                <li><a href="#servicios" id="drop-spec5">Diseño de redes contraincendio</a></li>
+                                <li><a href="#servicios" id="drop-spec6">Diseño vial y geométrico</a></li>
+                                <li><a href="#servicios" id="drop-spec7">Diseño de pavimentos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#servicios" id="drop-serv2">Implementación 2D a BIM</a></li>
+                        <li><a href="#servicios" id="drop-serv3">Coordinación de Obra</a></li>
+                        <li><a href="#servicios" id="drop-serv4">Construcción Eficiente</a></li>
+                    </ul>
+                </li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button id="lang-toggle" class="btn btn-secondary"
+                    style="padding: 0.5rem 1rem; font-weight: bold; border-radius: 8px;">🇺🇸 EN</button>
+                <button id="btn-cotizacion" class="btn btn-accent"
+                    style="font-family: inherit; font-size: 1rem;">Solicitar Cotización</button>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <!-- The background image is set in CSS -->
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>LA INTEGRACIÓN TOTAL DEL PROYECTO, EN UN SOLO MODELO</h1>
+                <p>Integramos arquitectura, estructuras e instalaciones en un solo modelo digital</p>
+                <div class="hero-buttons">
+                    <a href="#servicios" class="btn btn-primary">Descubre nuestros Servicios</a>
+                    <a href="#proyectos" class="btn btn-secondary"
+                        style="color: var(--bg-white); border-color: var(--bg-white);">Ver Proyectos</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="nosotros" class="section nosotros-section">
+        <div class="container">
+            <h2 id="nos-title" class="text-center" style="margin-bottom: 3rem;">Sobre <span
+                    class="highlight-primary">Nosotros</span></h2>
+            <div class="servicios-layout">
+                <div class="nosotros-text" style="color: #555; font-size: 1.1rem; line-height: 1.8;">
+                    <p id="nos-desc1" style="text-align: justify; margin-bottom: 1.5rem;">AlephBIM es una consultora de
+                        ingeniería civil especializada en la implementación de la metodología BIM (Building Information
+                        Modeling). Nacemos con el propósito de transformar la manera en que se planifica, diseña y
+                        construye en Colombia, llevando la digitalización de proyectos a constructoras, promotores
+                        inmobiliarios y entidades públicas de todo el país.</p>
+                    <p id="nos-desc2" style="text-align: justify;">Nuestro equipo está conformado por profesionales en
+                        el área y especialistas BIM comprometidos con la excelencia técnica, la innovación y la entrega
+                        de resultados medibles para cada proyecto. Creemos que la tecnología BIM no es un lujo — es la
+                        herramienta que reduce costos, elimina errores y garantiza obras de calidad.</p>
+                </div>
+                <div class="nosotros-image text-center"
+                    style="background: var(--bg-white); padding: 3rem; border-radius: 15px; border: 1px solid rgba(13,66,96,0.05); box-shadow: var(--shadow-sm);">
+                    <h4 id="nos-cert-title"
+                        style="color: var(--color-primary); margin-bottom: 2rem; font-size: 1.3rem;">Acreditaciones
+                        Internacionales</h4>
+                    <img src="img/BuildingSMART.png" alt="Certificado BuildingSMART"
+                        style="max-height: 200px; margin: 0 auto; object-fit: contain; border-radius: 10px; transition: transform 0.3s ease; box-shadow: var(--shadow-sm);"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="section beneficios-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="ben-title">Beneficios de la Implementación BIM</h2>
+                <p id="ben-desc" style="max-width: 800px; margin: 0 auto; text-align: center; color: #666;">BIM
+                    centraliza toda la información en un modelo digital inteligente, eliminando los errores y
+                    sobrecostos de la construcción tradicional.</p>
+            </div>
+            <div class="grid beneficios-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="card beneficio-card" style="flex-direction: column; text-align: center; gap: 1rem;">
+                    <div class="beneficio-icon color-primary" style="width: 60px; height: 60px; margin: 0 auto;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <div class="beneficio-text">
+                        <h3 id="ben1-title" style="text-transform: none; font-size: 1.3rem;">Eficiencia y Reducción de
+                            Costos</h3>
+                        <p id="ben1-desc" style="font-size: 0.95rem; text-align: center;">Reduce hasta un 30% los costos
+                            y optimiza los tiempos de ejecución detectando conflictos antes de la obra.</p>
+                    </div>
+                </div>
+                <div class="card beneficio-card" style="flex-direction: column; text-align: center; gap: 1rem;">
+                    <div class="beneficio-icon color-accent" style="width: 60px; height: 60px; margin: 0 auto;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="beneficio-text">
+                        <h3 id="ben2-title" style="text-transform: none; font-size: 1.3rem;">Mejor Coordinación</h3>
+                        <p id="ben2-desc" style="font-size: 0.95rem; text-align: center;">Colaboración integrada en
+                            tiempo real entre todas las disciplinas, evitando errores de comunicación y retrabajos.</p>
+                    </div>
+                </div>
+                <div class="card beneficio-card" style="flex-direction: column; text-align: center; gap: 1rem;">
+                    <div class="beneficio-icon color-primary" style="width: 60px; height: 60px; margin: 0 auto;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="beneficio-text">
+                        <h3 id="ben3-title" style="text-transform: none; font-size: 1.3rem;">Mayor ROI</h3>
+                        <p id="ben3-desc" style="font-size: 0.95rem; text-align: center;">Impulsa decisiones claras y
+                            reduce cambios tardíos, acelerando el avance y maximizando el retorno de inversión.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="section servicios-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros <span class="highlight-accent">Servicios</span></h2>
+                <p>Especialistas en diseño coordinado y soluciones integrales BIM.</p>
+                <a href="\assets\pdf\Brochure de Servicios.pdf" download id="btn-brochure" class="btn btn-secondary"
+                    style="margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar Brochure
+                </a>
+            </div>
+            <div class="grid coordination-grid" style="margin-top: 2rem;">
+                <!-- Servicio 1 -->
+                <div class="feature-box clickable-service"
+                    data-title="Especialidades de diseño integrado con Metodología BIM"
+                    data-desc="Integramos arquitectura, estructuras e instalaciones mediante metodología BIM para lograr un diseño eficiente, coordinado y libre de interferencias desde las etapas tempranas del proyecto, optimizando la toma de decisiones.<br><br><strong>Especialidades incluidas:</strong><div class='specialties-grid'><div class='spec-item'><svg class='spec-icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4M9 7h6M9 11h6'/></svg><span>Diseño arquitectónico</span></div><div class='spec-item'><svg class='spec-icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'/></svg><span>Diseño estructural</span></div><div class='spec-item'><svg class='spec-icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z'/></svg><span>Diseño hidrosanitario</span></div><div class='spec-item'><svg class='spec-icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><polygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'/></svg><span>Diseño eléctrico</span></div><div class='spec-item'><svg class='spec-icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M17.5 19c-1.5 1.5-3.5 2-5.5 2s-4-0.5-5.5-2c-2.5-2.5-2-6.5-1-8.5C6 9 8 7.5 9.5 5.5c1.5-2 1.5-4.5 1.5-4.5s1 2.5 3 4.5C15.5 7.5 17 9 18 10.5C19 12.5 19.5 16.5 17.5 19z'/></svg><span>Redes contraincendio</span></div><div class='spec-item'><svg class='spec-icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M3 18L12 22 21 18M3 14L12 18 21 14M12 2L3 6 12 10 21 6z'/></svg><span>Diseño vial y geom.</span></div><div class='spec-item'><svg class='spec-icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='14' width='18' height='4' rx='1'/><rect x='3' y='8' width='18' height='4' rx='1'/><path d='M3 20h18'/></svg><span>Diseño de pavimentos</span></div></div>">
+                    <div class="servicio-icon" style="margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h4>Especialidades de diseño integrado con Metodología BIM</h4>
+                    <p class="service-preview" style="font-size: 0.9rem; margin-top: 10px;">Ver detalles...</p>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="feature-box clickable-service"
+                    data-title="Implementación BIM a proyectos existentes - Del 2D al BIM"
+                    data-desc="Llevamos tus proyectos actuales desde planos tradicionales en 2D a modelos 3D inteligentes, enriquecidos con información paramétrica, facilitando la visualización, cuantificación y gestión integral de la obra.">
+                    <div class="servicio-icon" style="margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h4>Implementación BIM a proyectos existentes - Del 2D al BIM</h4>
+                    <p class="service-preview" style="font-size: 0.9rem; margin-top: 10px;">Ver detalles...</p>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="feature-box clickable-service" data-title="Coordinación y control de obra BIM"
+                    data-desc="Supervisamos y controlamos la ejecución de la obra utilizando modelos BIM actualizados, optimizando la logística, detectando conflictos en campo, reduciendo sobrecostos y asegurando la calidad constructiva según lo diseñado.">
+                    <div class="servicio-icon" style="margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h4>Coordinación y control de obra BIM</h4>
+                    <p class="service-preview" style="font-size: 0.9rem; margin-top: 10px;">Ver detalles...</p>
+                </div>
+                <!-- Servicio 4 -->
+                <div class="feature-box clickable-service" data-title="Construcción eficiente"
+                    data-desc="Aplicamos herramientas y flujos de trabajo BIM avanzados para planificar las fases constructivas (4D) y estimar costos con precisión (5D), logrando una ejecución de obra más ágil, transparente y con menor desperdicio de recursos.">
+                    <div class="servicio-icon" style="margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                            <rect x="9" y="9" width="6" height="6"></rect>
+                            <line x1="9" y1="1" x2="9" y2="4"></line>
+                            <line x1="15" y1="1" x2="15" y2="4"></line>
+                            <line x1="9" y1="20" x2="9" y2="23"></line>
+                            <line x1="15" y1="20" x2="15" y2="23"></line>
+                            <line x1="20" y1="9" x2="23" y2="9"></line>
+                            <line x1="20" y1="14" x2="23" y2="14"></line>
+                            <line x1="1" y1="9" x2="4" y2="9"></line>
+                            <line x1="1" y1="14" x2="4" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h4>Construcción eficiente</h4>
+                    <p class="service-preview" style="font-size: 0.9rem; margin-top: 10px;">Ver detalles...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="section proyectos-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros <span class="highlight-primary">Proyectos</span></h2>
+                <p class="section-subtitle">Conoce algunas de nuestras obras más destacadas.</p>
+            </div>
+        </div>
+
+        <div class="scrolling-banner">
+            <button id="scroll-prev" class="scroll-arrow prev" aria-label="Anterior">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <div id="projects-container" class="scrolling-banner-container">
+                <div class="scrolling-banner-track">
+                    <div class="project-card hover-reveal-card">
+                        <div class="project-img-wrapper"
+                            style="position: relative; height: 200px; overflow: hidden; transition: height 0.4s ease;">
+                            <img src="/img/Isometrico.png" alt="Casa Campo El Encanto"
+                                class="project-img"
+                                style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover; object-position: top; transition: all 0.4s ease; background-color: #fff;">
+                        </div>
+                        <h4 id="proy1-title">Casa Campo El Encanto</h4>
+                        <p id="proy1-desc">Diseño Integrado BIM - Diseño Hidrosanitario</p>
+                    </div>
+                    <div class="project-card hover-reveal-card">
+                        <div class="project-img-wrapper"
+                            style="position: relative; height: 200px; overflow: hidden; transition: height 0.4s ease;">
+                            <img src="img/Isometrico2.png" alt="Edificio Monte Cristo"
+                                class="project-img"
+                                style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover; object-position: top; transition: all 0.4s ease; background-color: #fff;">
+                        </div>
+                        <h4 id="proy2-title">Edificio Monte Cristo</h4>
+                        <p id="proy2-desc">Diseño Integrado BIM - Diseño Estructural</p>
+                    </div>
+                    <div class="project-card hover-reveal-card">
+                        <div class="project-img-wrapper"
+                            style="position: relative; height: 200px; overflow: hidden; transition: height 0.4s ease;">
+                            <img src="img/Estructura_P3.png" alt="Edificio Terra" class="project-img"
+                                style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover; object-position: top; transition: all 0.4s ease; background-color: #fff;">
+                        </div>
+                        <h4 id="proy3-title">Edificio Terra</h4>
+                        <p id="proy3-desc">Diseño Integrado BIM - Diseño Estructural</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="scroll-next" class="scroll-arrow next" aria-label="Siguiente">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <section id="contacto" class="section cta-section">
+        <div class="container text-center">
+            <h2>¿Listo para elevar tu próximo proyecto?</h2>
+            <p>Asóciate con ALEPHBIM para obtener precisión y experiencia estructural sin igual.</p>
+            <a href="mailto:alephbim@gmail.com" class="btn btn-primary btn-large">Contacta a nuestros Expertos</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="img/-_Isotipo_BLAN.png" alt="ALEPHBIM Isotipo" class="footer-logo">
+                <p>Potenciando la construcción a través de soluciones BIM de precisión.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>Email: <a href="mailto:alephbim@gmail.com">alephbim@gmail.com</a></p>
+                <p>Teléfono: <a href="tel:+573001652452">+57 300 165 2452</a></p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/alephbim/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ALEPHBIM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <!-- Modal Cotización -->
+    <div id="modal-cotizacion" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Solicitar <span class="highlight-accent">Cotización</span></h2>
+            <p>Déjanos tus datos y te contactaremos para cotizar tu proyecto.</p>
+            <form id="form-cotizacion" class="form-cotizacion">
+                <div class="form-group">
+                    <label for="nombre">Nombre / Empresa</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group" style="display: flex; gap: 1rem;">
+                    <div style="flex: 1;">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required
+                            style="width: 100%; padding: 0.8rem 1rem; border: 1px solid #ccc; border-radius: 8px;">
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="pais">País</label>
+                        <input type="text" id="pais" name="pais" required
+                            style="width: 100%; padding: 0.8rem 1rem; border: 1px solid #ccc; border-radius: 8px;">
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" name="ciudad" required
+                            style="width: 100%; padding: 0.8rem 1rem; border: 1px solid #ccc; border-radius: 8px;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="servicio">Servicio de interés</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="" id="opt-sel">Selecciona un servicio...</option>
+                        <option value="diseno_integrado" id="opt-serv1">Diseño Integrado BIM</option>
+                        <option value="implementacion" id="opt-serv2">Implementación 2D a BIM</option>
+                        <option value="coordinacion" id="opt-serv3">Coordinación de Obra</option>
+                        <option value="construccion" id="opt-serv4">Construcción Eficiente</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Detalles del Proyecto</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-accent btn-block">Enviar Solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Detalles de Servicio -->
+    <div id="modal-servicio" class="modal">
+        <div class="modal-content text-center">
+            <span class="close-modal-servicio close-modal">&times;</span>
+            <div class="servicio-icon" id="modal-servicio-icon"
+                style="margin: 0 auto 1.5rem auto; width: 60px; height: 60px;">
+                <!-- Icono dinámico -->
+            </div>
+            <h2 id="modal-servicio-title" style="margin-bottom: 1rem; font-size: 1.8rem; color: var(--color-primary);">
+                Título del Servicio</h2>
+            <p id="modal-servicio-desc" style="font-size: 1.1rem; line-height: 1.7; color: #555;">Descripción del
+                servicio.</p>
+            <button class="btn btn-secondary close-modal-btn" style="margin-top: 1.5rem;">Cerrar</button>
+        </div>
+    </div>
+    <a href="https://wa.me/573001652452" class="whatsapp-float" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+</body>
+
+</html>
