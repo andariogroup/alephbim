@@ -4,24 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALEPHBIM | Consultoría BIM Avanzada</title>
-    <meta name="description"
-        content="La integración total del proyecto, en un solo modelo. Integramos arquitectura, estructuras e instalaciones en un solo modelo digital.">
-    <meta name="keywords" content="BIM, ingeniería, modelado 3D, arquitectura, construcción, diseño">
-    <meta name="author" content="Tu Empresa">
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Servicios BIM e Ingeniería">
-    <meta property="og:description" content="Soluciones profesionales de ingeniería y modelado BIM.">
-    <meta property="og:image" content="img/logo.png">
+    <title>ALEPHBIM | Consultoría e Ingeniería BIM en Valledupar y Colombia</title>
+    <meta name="description" content="AlephBIM es una consultora de ingeniería civil ubicada en Valledupar, Colombia, especializada en la metodología BIM. Optimizamos proyectos en un solo modelo digital.">
+    <meta name="keywords" content="BIM Valledupar, consultoría BIM Valledupar, AlephBIM, ingeniería civil Valledupar, Colombia, modelado 3D, diseño arquitectónico, diseño estructural, diseño hidrosanitario, coordinación de obra, metodología BIM">
+    <meta name="author" content="AlephBIM">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://www.alephbim.com/">
+    
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.alephbim.com/">
+    <meta property="og:title" content="ALEPHBIM | Consultoría e Ingeniería BIM en Valledupar y Colombia">
+    <meta property="og:description" content="AlephBIM es una consultora especializada en diseño integrado BIM para constructoras y promotores.">
+    <meta property="og:image" content="https://www.alephbim.com/img/logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.alephbim.com/">
+    <meta name="twitter:title" content="ALEPHBIM | Consultoría e Ingeniería BIM en Valledupar y Colombia">
+    <meta name="twitter:description" content="AlephBIM es una consultora especializada en diseño integrado BIM para constructoras y promotores.">
+    <meta name="twitter:image" content="https://www.alephbim.com/img/logo.png">
+
+    <link rel="icon" type="image/png" href="img/-_isotipo_color (1).png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
+            <a href="#home" class="logo">
                 <div class="logo-white-wrapper">
                     <img src="img/-_Isotipo_BLAN.png" alt="ALEPHBIM Isotipo" class="logo-icon">
                     <img src="img/-_Nombre_BLANCO.png" alt="ALEPHBIM Nombre" class="logo-text">
@@ -56,13 +67,13 @@
                 </li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li class="nav-action-buttons">
+                    <button id="lang-toggle" class="btn btn-secondary"
+                        style="padding: 0.5rem 1rem; font-weight: bold; border-radius: 8px;">🇺🇸 EN</button>
+                    <button id="btn-cotizacion" class="btn btn-accent"
+                        style="font-family: inherit; font-size: 1rem;">Solicitar Cotización</button>
+                </li>
             </ul>
-            <div style="display: flex; gap: 10px; align-items: center;">
-                <button id="lang-toggle" class="btn btn-secondary"
-                    style="padding: 0.5rem 1rem; font-weight: bold; border-radius: 8px;">🇺🇸 EN</button>
-                <button id="btn-cotizacion" class="btn btn-accent"
-                    style="font-family: inherit; font-size: 1rem;">Solicitar Cotización</button>
-            </div>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -87,6 +98,7 @@
         </div>
     </header>
 
+    <main>
     <section id="nosotros" class="section nosotros-section">
         <div class="container">
             <h2 id="nos-title" class="text-center" style="margin-bottom: 3rem;">Sobre <span
@@ -96,7 +108,7 @@
                     <p id="nos-desc1" style="text-align: justify; margin-bottom: 1.5rem;">AlephBIM es una consultora de
                         ingeniería civil especializada en la implementación de la metodología BIM (Building Information
                         Modeling). Nacemos con el propósito de transformar la manera en que se planifica, diseña y
-                        construye en Colombia, llevando la digitalización de proyectos a constructoras, promotores
+                        construye en Colombia, llevando la digitalización de proyectos desde Valledupar a constructoras, promotores
                         inmobiliarios y entidades públicas de todo el país.</p>
                     <p id="nos-desc2" style="text-align: justify;">Nuestro equipo está conformado por profesionales en
                         el área y especialistas BIM comprometidos con la excelencia técnica, la innovación y la entrega
@@ -108,7 +120,7 @@
                     <h4 id="nos-cert-title"
                         style="color: var(--color-primary); margin-bottom: 2rem; font-size: 1.3rem;">Acreditaciones
                         Internacionales</h4>
-                    <img src="img/BuildingSMART.png" alt="Certificado BuildingSMART"
+                    <img src="img/BuildingSMART.png" alt="Certificado BuildingSMART" loading="lazy"
                         style="max-height: 200px; margin: 0 auto; object-fit: contain; border-radius: 10px; transition: transform 0.3s ease; box-shadow: var(--shadow-sm);"
                         onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                 </div>
@@ -260,6 +272,19 @@
                     <h4>Construcción eficiente</h4>
                     <p class="service-preview" style="font-size: 0.9rem; margin-top: 10px;">Ver detalles...</p>
                 </div>
+                <!-- Servicio 5 -->
+                <div class="feature-box clickable-service" data-title="Levantamiento con LiDAR Terrestre"
+                    data-desc="Realizamos levantamientos topográficos y arquitectónicos de alta precisión mediante escáner láser LiDAR terrestre, generando nubes de puntos 3D detalladas. Esta tecnología permite capturar la realidad exacta de estructuras existentes, facilitando la creación de modelos BIM as-built, análisis de deformaciones, control de calidad y planificación de intervenciones con mínimo margen de error.">
+                    <div class="servicio-icon" style="margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="2"></circle>
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                        </svg>
+                    </div>
+                    <h4>Levantamiento con LiDAR Terrestre</h4>
+                    <p class="service-preview" style="font-size: 0.9rem; margin-top: 10px;">Ver detalles...</p>
+                </div>
             </div>
         </div>
     </section>
@@ -281,34 +306,87 @@
 
             <div id="projects-container" class="scrolling-banner-container">
                 <div class="scrolling-banner-track">
-                    <div class="project-card hover-reveal-card">
+                    <div class="project-card hover-reveal-card clickable-project" style="cursor: pointer;"
+                        data-title="Casa campestre multifamiliar"
+                        data-images="img/Isometrico.png|placeholder1"
+                        data-content="
+                        <p><strong>Especialidades:</strong> Diseño Integrado BIM - Diseño Hidrosanitario.</p>
+                        <p><strong>Área:</strong> 450 m² (Aprox.) | <strong>Ubicación:</strong> Valledupar, Cesar.</p>
+                        <p><strong>Descripción:</strong> Desarrollo de un modelo digital completo integrando la arquitectura con las redes hidrosanitarias, garantizando la viabilidad espacial y técnica del proyecto.</p>
+                        ">
                         <div class="project-img-wrapper"
                             style="position: relative; height: 200px; overflow: hidden; transition: height 0.4s ease;">
-                            <img src="/img/Isometrico.png" alt="Casa Campo El Encanto"
+                            <img src="img/Isometrico.png" alt="Casa campestre multifamiliar" loading="lazy"
                                 class="project-img"
                                 style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover; object-position: top; transition: all 0.4s ease; background-color: #fff;">
                         </div>
-                        <h4 id="proy1-title">Casa Campo El Encanto</h4>
+                        <h4 id="proy1-title">Casa campestre multifamiliar</h4>
                         <p id="proy1-desc">Diseño Integrado BIM - Diseño Hidrosanitario</p>
                     </div>
-                    <div class="project-card hover-reveal-card">
+                    <div class="project-card hover-reveal-card clickable-project" style="cursor: pointer;"
+                        data-title="Edificio de apartamentos multifamiliar – 30 pisos"
+                        data-images="img/Isometrico2.png"
+                        data-content="
+                        <p><strong>Especialidades:</strong> Diseño Integrado BIM - Diseño Estructural.</p>
+                        <p><strong>Área:</strong> 25,000 m² (Aprox.) | <strong>Ubicación:</strong> Barranquilla, Atlántico.</p>
+                        <p><strong>Descripción:</strong> Coordinación y modelado 3D de la estructura para un edificio residencial, optimizando el uso de materiales y detectando colisiones con otras disciplinas.</p>
+                        ">
                         <div class="project-img-wrapper"
                             style="position: relative; height: 200px; overflow: hidden; transition: height 0.4s ease;">
-                            <img src="img/Isometrico2.png" alt="Edificio Monte Cristo"
+                            <img src="img/Isometrico2.png" alt="Edificio de apartamentos multifamiliar – 30 pisos" loading="lazy"
                                 class="project-img"
                                 style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover; object-position: top; transition: all 0.4s ease; background-color: #fff;">
                         </div>
-                        <h4 id="proy2-title">Edificio Monte Cristo</h4>
+                        <h4 id="proy2-title">Edificio de apartamentos multifamiliar – 30 pisos</h4>
                         <p id="proy2-desc">Diseño Integrado BIM - Diseño Estructural</p>
                     </div>
-                    <div class="project-card hover-reveal-card">
+                    <div class="project-card hover-reveal-card clickable-project" style="cursor: pointer;"
+                        data-title="Edificio de apartamentos multifamiliar – 35 pisos"
+                        data-images="img/Estructura_P3.png"
+                        data-content="
+                        <p><strong>Especialidades:</strong> Diseño Integrado BIM - Diseño Estructural.</p>
+                        <p><strong>Área:</strong> 32,000 m² (Aprox.) | <strong>Ubicación:</strong> Bogotá D.C., Colombia.</p>
+                        <p><strong>Descripción:</strong> Modelado estructural detallado para garantizar la seguridad y eficiencia constructiva en un edificio de gran altura, integrando soluciones avanzadas en BIM.</p>
+                        ">
                         <div class="project-img-wrapper"
                             style="position: relative; height: 200px; overflow: hidden; transition: height 0.4s ease;">
-                            <img src="img/Estructura_P3.png" alt="Edificio Terra" class="project-img"
+                            <img src="img/Estructura_P3.png" alt="Edificio de apartamentos multifamiliar – 35 pisos" loading="lazy" class="project-img"
                                 style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover; object-position: top; transition: all 0.4s ease; background-color: #fff;">
                         </div>
-                        <h4 id="proy3-title">Edificio Terra</h4>
+                        <h4 id="proy3-title">Edificio de apartamentos multifamiliar – 35 pisos</h4>
                         <p id="proy3-desc">Diseño Integrado BIM - Diseño Estructural</p>
+                    </div>
+                    <div class="project-card hover-reveal-card clickable-project" style="cursor: pointer;"
+                        data-title="Comedor institucional en sistema Steel Framing"
+                        data-images="img/Proyecto 4 -1.png|img/Proyecto 4 -2.png"
+                        data-content="
+                        <p><strong>Especialidades:</strong> Diseño Integrado BIM - Diseño Estructural Steel Framing - Diseño Hidrosanitario.</p>
+                        <p><strong>Área:</strong> 466 m² | <strong>Ubicación:</strong> Puente Nacional, Santander.</p>
+                        <p><strong>Descripción:</strong> Desarrollo del modelo BIM completo de un comedor institucional ejecutado en sistema constructivo Steel Framing, integrando la coordinación estructural y las redes hidrosanitarias para garantizar la viabilidad técnica del proyecto.</p>
+                        ">
+                        <div class="project-img-wrapper"
+                            style="position: relative; height: 200px; overflow: hidden; transition: height 0.4s ease;">
+                            <img src="img/Proyecto 4 -2.png" alt="Comedor institucional Steel Framing" loading="lazy" class="project-img"
+                                style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover; object-position: top; transition: all 0.4s ease; background-color: #fff;">
+                        </div>
+                        <h4 id="proy4-title">Comedor institucional Steel Framing</h4>
+                        <p id="proy4-desc">Diseño Integrado BIM - Estructural Steel Framing e Hidrosanitario</p>
+                    </div>
+                    <div class="project-card hover-reveal-card clickable-project" style="cursor: pointer;"
+                        data-title="Comedor Institucional - Puente Nacional"
+                        data-images="placeholder1|placeholder2"
+                        data-content="
+                        <p><strong>Especialidades:</strong> Diseño Integrado BIM - Diseño Estructural Steel Framing - Diseño Hidrosanitario.</p>
+                        <p><strong>Área:</strong> 466 m² | <strong>Ubicación:</strong> Puente Nacional, Santander.</p>
+                        <p><strong>Descripción:</strong> Modelado BIM integral de un comedor institucional en Puente Nacional, coordinando el sistema estructural y las redes hidrosanitarias para asegurar la correcta ejecución del proyecto.</p>
+                        ">
+                        <div class="project-img-wrapper"
+                            style="position: relative; height: 200px; overflow: hidden; transition: height 0.4s ease;">
+                            <img src="img/Isometrico2.png" alt="Comedor Institucional Puente Nacional" loading="lazy" class="project-img"
+                                style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover; object-position: top; transition: all 0.4s ease; background-color: #fff;">
+                        </div>
+                        <h4 id="proy5-title">Comedor Institucional - Puente Nacional</h4>
+                        <p id="proy5-desc">Diseño Integrado BIM - Estructural Steel Framing e Hidrosanitario</p>
                     </div>
                 </div>
             </div>
@@ -328,11 +406,12 @@
             <a href="mailto:alephbim@gmail.com" class="btn btn-primary btn-large">Contacta a nuestros Expertos</a>
         </div>
     </section>
+    </main>
 
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
-                <img src="img/-_Isotipo_BLAN.png" alt="ALEPHBIM Isotipo" class="footer-logo">
+                <img src="img/-_Isotipo_BLAN.png" alt="ALEPHBIM Isotipo" loading="lazy" class="footer-logo">
                 <p>Potenciando la construcción a través de soluciones BIM de precisión.</p>
             </div>
             <div class="footer-links">
@@ -358,7 +437,7 @@
                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                         </svg>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/alephbim-undefined-9b9ba0413/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
@@ -443,8 +522,38 @@
             <button class="btn btn-secondary close-modal-btn" style="margin-top: 1.5rem;">Cerrar</button>
         </div>
     </div>
-    <a href="https://wa.me/573001652452" class="whatsapp-float" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    
+    <!-- Modal Detalles de Proyecto -->
+    <div id="modal-proyecto" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-proyecto close-modal">&times;</span>
+            <h2 id="modal-proyecto-title" style="margin-bottom: 1rem; font-size: 1.8rem; color: var(--color-primary); text-align: center;">Título del Proyecto</h2>
+            <div id="modal-proyecto-content" style="font-size: 1.05rem; line-height: 1.6; color: #444; text-align: left;">
+                <!-- Contenido dinámico -->
+            </div>
+            
+            <div id="modal-proyecto-carousel" style="display: none; position: relative; margin-top: 1.5rem; text-align: center; background-color: #f8f9fa; border-radius: 8px; padding: 1rem; height: 350px; align-items: center; justify-content: center;">
+                <button id="carousel-prev" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.15); color: #333; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.3s ease;" onmouseover="this.style.background='rgba(0,0,0,0.4)'; this.style.color='#fff';" onmouseout="this.style.background='rgba(0,0,0,0.15)'; this.style.color='#333';">&#10094;</button>
+                
+                <div id="carousel-image-container" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <img id="modal-carousel-img" src="" style="max-width: 100%; max-height: 100%; border-radius: 8px; object-fit: contain; display: none;">
+                    <div id="modal-carousel-placeholder" style="color: #6c757d; font-size: 1.1rem; display: none;">
+                        [Espacio para imagen futura]
+                    </div>
+                </div>
+
+                <button id="carousel-next" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.15); color: #333; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.3s ease;" onmouseover="this.style.background='rgba(0,0,0,0.4)'; this.style.color='#fff';" onmouseout="this.style.background='rgba(0,0,0,0.15)'; this.style.color='#333';">&#10095;</button>
+                
+                <div id="carousel-dots" style="position: absolute; bottom: 10px; left: 0; right: 0; text-align: center;"></div>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="btn btn-secondary close-modal-proyecto-btn" style="margin-top: 1.5rem;">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    <a href="https://wa.me/573001652452" class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" loading="lazy">
     </a>
 </body>
 

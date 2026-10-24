@@ -99,13 +99,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (projectsContainer && scrollPrev && scrollNext) {
         const scrollAmount = 382; // card width (350) + gap (32)
-        
-        scrollPrev.addEventListener('click', () => {
-            projectsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
 
         scrollNext.addEventListener('click', () => {
-            projectsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            const { scrollLeft, scrollWidth, clientWidth } = projectsContainer;
+            const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 10;
+
+            if (isAtEnd) {
+                projectsContainer.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                projectsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        });
+
+        scrollPrev.addEventListener('click', () => {
+            const { scrollLeft, scrollWidth, clientWidth } = projectsContainer;
+            const isAtStart = scrollLeft <= 10;
+
+            if (isAtStart) {
+                projectsContainer.scrollTo({ left: scrollWidth, behavior: 'smooth' });
+            } else {
+                projectsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
         });
     }
 
@@ -139,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle form submission
         const formCotizacion = document.getElementById('form-cotizacion');
         if (formCotizacion) {
-            formCotizacion.addEventListener('submit', (e) => {
+            formCotizacion.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 
                 const nombre = document.getElementById('nombre').value;
@@ -151,15 +165,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 const servicio = servicioSelect.options[servicioSelect.selectedIndex].text;
                 const mensaje = document.getElementById('mensaje').value;
 
-                const subject = encodeURIComponent(`Nueva Solicitud de Cotización - ${servicio}`);
-                const body = encodeURIComponent(`Nombre / Empresa: ${nombre}\nCorreo Electrónico: ${email}\nTeléfono: ${telefono}\nPaís: ${pais}\nCiudad: ${ciudad}\nServicio de Interés: ${servicio}\n\nDetalles del Proyecto:\n${mensaje}`);
-                
-                window.location.href = `mailto:alephbim@gmail.com?subject=${subject}&body=${body}`;
+                const submitBtn = formCotizacion.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = 'Enviando...';
+                submitBtn.disabled = true;
 
-                alert('¡Gracias por tu solicitud! Se abrirá tu cliente de correo para enviar la información.');
-                modalCotizacion.classList.remove('show');
-                document.body.style.overflow = '';
-                formCotizacion.reset();
+                try {
+                    const response = await fetch('enviar.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            nombre, email, telefono, pais, ciudad, servicio, mensaje
+                        })
+                    });
+
+                    const result = await response.json();
+
+                    if (result.status === 'success') {
+                        alert('¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto.');
+                        modalCotizacion.classList.remove('show');
+                        document.body.style.overflow = '';
+                        formCotizacion.reset();
+                    } else {
+                        alert('Hubo un error al enviar el correo. Por favor intenta más tarde.');
+                    }
+                } catch (error) {
+                    alert('Hubo un error de conexión al enviar el correo. Por favor intenta más tarde.');
+                } finally {
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                }
             });
         }
     }
@@ -197,6 +234,111 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('click', (e) => {
             if (e.target === modalServicio) {
                 modalServicio.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // Modal Proyecto Logic
+    const modalProyecto = document.getElementById('modal-proyecto');
+    const closeBtnsProyecto = document.querySelectorAll('.close-modal-proyecto, .close-modal-proyecto-btn');
+    const clickableProjects = document.querySelectorAll('.clickable-project');
+    
+    // Carousel variables
+    let currentCarouselImages = [];
+    let currentCarouselIndex = 0;
+    const carouselContainer = document.getElementById('modal-proyecto-carousel');
+    const carouselImg = document.getElementById('modal-carousel-img');
+    const carouselPlaceholder = document.getElementById('modal-carousel-placeholder');
+    const carouselDots = document.getElementById('carousel-dots');
+    
+    function updateCarousel() {
+        if (!carouselContainer) return;
+        if (currentCarouselImages.length === 0) {
+            carouselContainer.style.display = 'none';
+            return;
+        }
+        carouselContainer.style.display = 'flex';
+        
+        const currentImage = currentCarouselImages[currentCarouselIndex];
+        if (currentImage.startsWith('placeholder')) {
+            carouselImg.style.display = 'none';
+            carouselPlaceholder.style.display = 'block';
+            carouselPlaceholder.innerText = `[Espacio para imagen ${currentCarouselIndex + 1}]`;
+        } else {
+            carouselPlaceholder.style.display = 'none';
+            carouselImg.style.display = 'block';
+            carouselImg.src = currentImage;
+        }
+
+        // Update dots
+        if (carouselDots) {
+            carouselDots.innerHTML = '';
+            currentCarouselImages.forEach((_, idx) => {
+                const dot = document.createElement('span');
+                dot.style.display = 'inline-block';
+                dot.style.width = '10px';
+                dot.style.height = '10px';
+                dot.style.margin = '0 5px';
+                dot.style.borderRadius = '50%';
+                dot.style.backgroundColor = idx === currentCarouselIndex ? 'var(--color-primary)' : '#ccc';
+                dot.style.cursor = 'pointer';
+                dot.addEventListener('click', () => {
+                    currentCarouselIndex = idx;
+                    updateCarousel();
+                });
+                carouselDots.appendChild(dot);
+            });
+        }
+    }
+
+    if (document.getElementById('carousel-prev')) {
+        document.getElementById('carousel-prev').addEventListener('click', () => {
+            currentCarouselIndex = (currentCarouselIndex > 0) ? currentCarouselIndex - 1 : currentCarouselImages.length - 1;
+            updateCarousel();
+        });
+    }
+
+    if (document.getElementById('carousel-next')) {
+        document.getElementById('carousel-next').addEventListener('click', () => {
+            currentCarouselIndex = (currentCarouselIndex < currentCarouselImages.length - 1) ? currentCarouselIndex + 1 : 0;
+            updateCarousel();
+        });
+    }
+
+    if (modalProyecto) {
+        clickableProjects.forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.getAttribute('data-title');
+                const content = card.getAttribute('data-content');
+                const imagesStr = card.getAttribute('data-images');
+                
+                document.getElementById('modal-proyecto-title').innerText = title;
+                document.getElementById('modal-proyecto-content').innerHTML = content;
+
+                if (imagesStr) {
+                    currentCarouselImages = imagesStr.split('|').filter(img => img.trim() !== '');
+                } else {
+                    currentCarouselImages = [];
+                }
+                currentCarouselIndex = 0;
+                updateCarousel();
+                
+                modalProyecto.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeBtnsProyecto.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modalProyecto.classList.remove('show');
+                document.body.style.overflow = '';
+            });
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modalProyecto) {
+                modalProyecto.classList.remove('show');
                 document.body.style.overflow = '';
             }
         });
